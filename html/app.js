@@ -5,17 +5,17 @@ const { ref } = Vue
 const load = Vue.createApp({
   setup () {
     return {
-      CarouselText1: 'You can add/remove items, vehicles, jobs & gangs through the shared folder.',
-      CarouselSubText1: 'Photo captured by: Markyoo#8068',
-      CarouselText2: 'Adding additional player data can be achieved by modifying the qb-core player.lua file.',
-      CarouselSubText2: 'Photo captured by: ihyajb#9723',
-      CarouselText3: 'All server-specific adjustments can be made in the config.lua files throughout the build.',
-      CarouselSubText3: 'Photo captured by: FLAPZ[INACTIV]#9925',
-      CarouselText4: 'For additional support please join our community at discord.gg/qbcore',
-      CarouselSubText4: 'Photo captured by: Robinerino#1312',
+      CarouselText1: 'DGSN',
+      CarouselSubText1: 'The General Directorate for National Security Commonly referred to by its acronym, is the national police force of the Kingdom of Morocco. The DGSN is tasked with upholding the law and public order.',
+      CarouselText2: 'Events',
+      CarouselSubText2: 'Civilian events and activities hold a special place on Maroc RolePlay. Civilian fishing, hunting, automatic races and drifting, you will hardly be bored on Maroc RolePlay.',
+      CarouselText3: 'Build an Empire',
+      CarouselSubText3: 'Organizations are diverse: black, mafia, gang... The illegal world is an important trait of the server, highlighted in both developed content and role play interactions.',
+      CarouselText4: 'Justice',
+      CarouselSubText4: 'Government and justice are fully integrated into the functioning of businesses, lawyer, judge, prosecutor, governor or investigator careers are vast in the government of Maroc RolePlay',
 
-      DownloadTitle: 'Downloading QBCore Server',
-      DownloadDesc: "Hold tight while we begin downloading all the resources/assets required to play on QBCore Server. \n\nAfter download has been finished successfully, you'll be placed into the server and this screen will disappear. Please don't leave or turn off your PC. ",
+      DownloadTitle: 'JOIN US',
+      DownloadDesc: "Maroc RolePlay tends to offer unique and original content for its community. \n\nQuality of roleplaying, consistency and fair play are in force on the server. ",
 
       SettingsTitle: 'Settings',
       AudioTrackDesc1: 'When disabled the current audio-track playing will be stopped.',
@@ -57,16 +57,16 @@ const load = Vue.createApp({
 load.use(Quasar, { config: {} })
 load.mount('#loading-main')
 
-var audio = document.getElementById("audio");
-audio.volume = 0.2;
+// var audio = document.getElementById("audio");
+// audio.volume = 0.2;
 
 function audiotoggle() {
-    var audio = document.getElementById("audio");
-    if (audio.paused) {
-        audio.play();
-    } else {
-        audio.pause();
-    }
+    // var audio = document.getElementById("audio");
+    // if (audio.paused) {
+    //     audio.play();
+    // } else {
+    //     audio.pause();
+    // }
 }
 
 function videotoggle() {

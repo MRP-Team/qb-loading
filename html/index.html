@@ -9,35 +9,26 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/quasar@2.1.0/dist/quasar.umd.prod.js" defer></script>
+        <script type="text/javascript" src="https://unpkg.com/youtube-background/jquery.youtube-background.min.js"></script>
         <script src="app.js" defer></script>
     </head>
     <!-- This is where you want to replace with your audio -->
-
-    <audio autoplay loop id="audio" src="/assets/audio/lemaroc.mp3"></audio>
-
     <body>
         <div id="loading-main" style="min-height: auto;">
+            <div id="loading-video"
+                data-vbg="https://www.youtube.com/watch?v=s2PYd54iEO0"
+                data-vbg-start-at="89"
+                data-vbg-play-button="true"
+                data-vbg-mute-button="true"
+                data-vbg-autoplay="true"
+                data-vbg-muted="false">
+            </div>
 
-            <!-- Uncomment q-parallax and comment out q-carousel if you want to use a video background instead -->
-
-            <q-carousel animated v-model="firstslide" :autoplay="secondap" ref="carousel" infinite>
-                <q-carousel-slide :name="1" img-src="/assets/images/1.png"></q-carousel-slide>
-                <q-carousel-slide :name="2" img-src="/assets/images/2.png"></q-carousel-slide>
-                <q-carousel-slide :name="3" img-src="/assets/images/3.png"></q-carousel-slide>
-                <q-carousel-slide :name="4" img-src="/assets/images/4.png"></q-carousel-slide>
-            </q-carousel>
-
-            <!-- This is where you want to replace with your video -->
-
-            <!--
-            <q-parallax :height="1080">
-                <template v-slot:media>
-                    <video id="video" width="1920" height="1080" autoplay loop muted>
-                    <source type="video/mp4" src="/assets/video/freestockvideo.mp4"></video>
-                </template>
-            </q-parallax>
-            -->
-
+            <script type="text/javascript">
+                jQuery(document).ready(function() {
+                    jQuery('#loading-video').youtube_background();
+                });
+            </script>
             <div class="absolute-top q-pa-xl">
                 <q-card flat style="width: auto; background: transparent;">
                     <q-card-section class="row items-center no-wrap">
@@ -184,19 +175,18 @@
 
                         <!-- This is where you want to replace with your logo -->
 
-                        <img class="cursor-none brand-logo" src="/assets/branding/qbcore.svg"></img>
+                        <img class="cursor-none brand-logo" src="https://www.marocroleplay.com/img/logo%2bhi.png"></img>
                         <q-space></q-space>
                         <q-btn :ripple="false" flat size="xl" icon="downloading" color="white" @click="download = true"></q-btn>
                         <div class="loadingbar">
                             <div class="loadbar"><div class="thingy"></div></div>
                         </div>
-                        <q-btn icon="settings_suggest" color="bgbutton" @click="settings = true"></q-btn>
                     </q-card-section>
                 </q-card>
             </div>
 
             <q-dialog no-shake v-model="download" position="bottom">
-                <q-card style="max-width: 400px; margin-left: 50vw; margin-bottom: 13vh;">
+                <q-card style="max-width: 400px; margin-left: 50vw; margin-bottom: 20vh;">
                     <q-card-section>
                         <div style="white-space: pre-wrap;" class="text-h6">
                             {{ DownloadTitle }}
