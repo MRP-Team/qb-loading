@@ -7,12 +7,13 @@ version '1.2.0'
 client_script 'client/client.lua'
 
 files {
-  'assets/**',
-  'html/*'
+  '*.html',
+  'assets/**/*.*',
+  'assets/**/**/*.*'
 }
 
 loadscreen {
-  'html/index.html'
+  'index.html'
 }
 
 loadscreen_cursor 'yes'
