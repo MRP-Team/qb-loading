@@ -162,7 +162,7 @@ function onPlayerReady() {
         if(muted) {
             let volume = 0.3;
             interval = setInterval(() => {
-                if(volume > 0.00) {
+                if(volume > 0.02 && volume < 1.00) {
                     volume -= 0.02
                     song.volume = volume;
                 } else {
@@ -173,7 +173,7 @@ function onPlayerReady() {
         } else {
             let volume = 0.0;
             interval = setInterval(() => {
-                if(volume < 1.00) {
+                if(volume < 0.98) {
                     volume += 0.02
                     song.volume = volume;
                 } else {
